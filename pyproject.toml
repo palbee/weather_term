@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "weather-term"
+version = "0.1.0"
+description = "Render weather data in the terminal"
+authors = ["Paul Albee <paul@albee.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+packages = [{include = "weather_term"}]
+
+[tool.poetry.scripts]
+fetch_data_weather_gov = 'weather_term.fetch_data_weather_gov:run'
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+matplotlib = "^3.7.1"
+matplotlib-sixel = "^0.0.2"
+ipython = "^8.13.2"
+requests = "^2.30.0"
+matplotlib-terminal = "^0.1a4"
+matplotlib-backend-notcurses = "^1.0.2"
+matplotlib-backend-kitty = "^2.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
